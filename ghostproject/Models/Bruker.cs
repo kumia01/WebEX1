@@ -10,4 +10,4 @@
         public string PostNr { get; set; }
         public string Poststed { get; set; }
     }
-}|
+}
