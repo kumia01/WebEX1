@@ -1,2 +1,19 @@
 ﻿body {
+    
+}
+
+#hei {
+    width: 200px;
+    height: 200px;
+}
+
+#headerform {
+    text-align: center;
+    color: #023e73;
+}
+
+#paneler {
+    text-align: center;
+    background-color: #d9d9d9;
+    color: #023e73;
 }
