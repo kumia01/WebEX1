@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ghostproject.Models;
 
 namespace ghostproject
 {
@@ -18,7 +19,7 @@ namespace ghostproject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<DBModels.DBbruker>(option => option.UseSqlite("Data Scource=Kunde.db"));
+            services.AddDbContext<DB>(option => option.UseSqlite("Data Source=Bruker.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,6 +28,7 @@ namespace ghostproject
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                //DBinit.Initialize(app);
             }
 
             app.UseRouting();

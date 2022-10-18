@@ -9,18 +9,18 @@ namespace ghostproject.Controllers
     public class AksjeController : ControllerBase
     {
         public List<Aksje> Aksje;
-        public bool Lagre(Aksje innAkjse)
+        /*public bool Lagre(Aksje innAkjse)
         {
 
             try
             {
-                Aksje.Add(innAkjse);
-                return true;
+                var nyAksjeRad = new Aksje();
+
             }
             catch
             {
                 return false;
             }
-        }
+        }*/
     }
 }
