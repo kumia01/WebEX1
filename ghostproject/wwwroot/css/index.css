@@ -1,2 +1,8 @@
 ﻿body {
+    background-color: #D9D9D9;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#navbarDropdown {
+    color: #0027FF;
 }
