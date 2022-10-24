@@ -1,6 +1,7 @@
 ﻿using ghostproject.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ghostproject.Controllers
 {
@@ -8,19 +9,24 @@ namespace ghostproject.Controllers
     [Route("[controller]/[action]")]
     public class AksjeController : ControllerBase
     {
-        public List<Aksje> Aksje;
-        /*public bool Lagre(Aksje innAkjse)
-        {
+        private readonly AksjeController _dbAksje;
 
+        public AksjeController(DB Aksje)
+        {
+            _dbAksje = dbAksje;
+        }
+
+        public async Task<List<Aksje>> HentAlle()
+        {
             try
             {
-                var nyAksjeRad = new Aksje();
 
             }
             catch
             {
-                return false;
+
             }
-        }*/
+        }
+        
     }
 }
