@@ -10,6 +10,7 @@
     $("#btnSkriv").click(function () {
         hentAlleTransaksjoner();
     });
+    hentAlleAksjer();
 });
 
 function hentAlleTransaksjoner() {
@@ -101,5 +102,28 @@ function lagreTransaksjon() {
             $("#feil").html("Feil i db - prøv igjen senere")
         }
     });
+}
+
+function hentAlleAksjer() {
+    $.get("../Aksje/HentAlle", function (Aksjer) {
+        formaterAksjer(Aksjer);
+    });
+}
+
+function formaterAksjer(Aksjer) {
+    let ut = "<table class='table table-striped'>" +
+        "<tr>" +
+        "<th>ID</th><th>Selskap</th>Ticker<th></th><th>Pris</th>" +
+        "</tr>";
+    for (let Aksje of Aksjer) {
+        ut += "<tr>" +
+            "<td>" + Aksje.Id + "</td>" +
+            "<td>" + Aksje.Selskap + "</td>" +
+            "<td>" + Aksje.Ticker + "</td>" +
+            "<td>" + Aksje.Pris + "</td>" +
+            "</tr>";
+    }
+    ut += "</table>";
+    $("#testAksje").html(ut);
 }
 
