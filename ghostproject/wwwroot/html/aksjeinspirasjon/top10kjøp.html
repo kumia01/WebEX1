@@ -1,16 +1,16 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Bootstrap Example</title>
+    <title>Top 10 Aksjer Mest Kjøpte</title>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-    <script src="../js/eksperthjelp.js"></script>
-    <link rel="stylesheet" href="../css/eksperthjelp.css">
-    <link rel="stylesheet" href="../css/index.css" />
+    <!--Manglende script   <script src="../js/eksperthjelp.js"></script>    -->
+    <link rel="stylesheet" href="../../css/eksperthjelp.css">
+    <link rel="stylesheet" href="../../css/index.css" />
 </head>
 <body>
     <!--navbar-->
@@ -20,7 +20,7 @@
             <!--nav logo-->
             <a href="index.html" class="navbar-brand mb-0 h1">
                 <img class="d-inline-block align-top"
-                     src="../img/ghost_graph.png" width="40" height="40">
+                     src="../../img/ghost_graph.png" width="40" height="40">
             </a>
 
             <!---Responsiv--->
@@ -41,7 +41,7 @@
                         <a href="#" class="nav-link active"></a>
                     </li>
                     <li class="nav-item">
-                        <a href="kundeservice.html" class="nav-link">Kundeservice</a>
+                        <a href="../kundeservice.html" class="nav-link">Kundeservice</a>
                     </li>
                     <!--dropdown marked-->
                     <li class="nav-item dropdown">
@@ -51,9 +51,9 @@
                            aria-expanded="false">Marked</a>
                         <!--selve dropdown marked-->
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a href="aksjeanalyse.html" class="dropdown-item">Aksjeanalyse</a>
+                            <li><a href="../aksjeanalyse.html" class="dropdown-item">Aksjeanalyse</a>
                             <li>
-                                <a href="eksperthjelp.html" class="dropdown-item">Eksperthjelp</a>
+                                <a href="../eksperthjelp.html" class="dropdown-item">Eksperthjelp</a>
                             </li>
                         </ul>
                     </li>
@@ -79,49 +79,53 @@
                 </ul>
             </div><!--wrapper-->
         </div> <!--container-->
-    </nav> <!--navbar-->
+    </nav>
+    <!--navbar-->
 
-
-    <div class="form">
+    <div class="form bg-*">
         <div class="col-sm-12" id="headerform">
-            <h1 class="display-3">Aksjeinspirasjon</h1>
-            <p class="lead">Her er de beste tipsene våre eksperter har å komme med. De er 100% pålitelige</p>
+            <h1 class="display-3" style="color: #0027FF">Top 10 Mest Kjøpte Aksjer</h1>
+            <p class="lead">Her får du en oversikt over de mest kjøpte aksjene den siste uken</p>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="panel" id="paneler">
-                    <div class="panel-heading">Top 10 Aksjer</div>
-                    <div class="panel-body"><img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="bilder" class="img-responsive" style="width:100%" alt="Bilde av Per"></div>
-                    <div class="panel-footer">
-                        <a href="aksjeinspirasjon/top10kjøp.html">Top 10 Kjøpte</a><br />
-                        <a href="aksjeinspirasjon/top10salg.html">Top 10 Solgte</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="panel" id="paneler">
-                    <div class="panel-heading">Trending</div>
-                    <div class="panel-body"><img src="https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="bilder" class="img-responsive" style="width:100%" alt="Bilde av Robert"></div>
-                    <div class="panel-footer">
-                        <a>Trending Kjøp Over 10mil Omsettning</a><br />
-                        <a>Trending Kjøp Under 10mil Omsettning</a><
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="panel" id="paneler">
-                    <div class="panel-heading">Akjser handplukket av våre eksperter</div>
-                    <div class="panel-body"><img src="https://images.pexels.com/photos/1181394/pexels-photo-1181394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="bilder" class="img-responsive" style="width:100%" alt="Tor"></div>
-                    <div class="panel-footer">
-                        <a>Aksjer Vi Kjøper</a><br />
-                        <a>Aksjer Vi Selger</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+    <div>
+        <table class="table bg-*">
+            <thead style="color: #0027FF">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Bedriftnavn</th>
+                    <th scope="col">Ticker</th>
+                    <th scope="col">Pris</th>
+                    <th scope="col">Pris-endring</th>
+                    <th scope="col">Kjøp / Selg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Telenor</td>
+                    <td>TEL</td>
+                    <td>94,84</td>
+                    <td>0,11%</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Kjøp</button>
+                        <button type="button" class="btn btn-danger">Selg</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div></body>
 </html>
