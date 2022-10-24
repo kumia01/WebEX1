@@ -1,11 +1,7 @@
-﻿function hideDiv() {
-    $("#btnHide").click(function () {
-        $("#bootstrapExample").hide();
-    });
-}
+﻿function hentAlleAksjer() {
 
-function showDiv() {
-    $("#btnShow").click(function () {
-        $("#bootstrapExample").show();
+//Begynnelse på å liste alle aksjer i kundeanalyse
+    $.get("aksje/hentAlle", function (aksjer) {
+        formaterAksjer(aksjer);
     });
 }
