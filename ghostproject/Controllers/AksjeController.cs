@@ -24,6 +24,7 @@ namespace ghostproject.Controllers
 
         public async Task<List<Aksje>> HentAlle()
         {
+            Console.WriteLine("koden kjører");
             try
             {
                 List<Aksje> alleAksjer = await _dbAksje.FlereAksjer.Select(b => new Aksje
@@ -34,6 +35,10 @@ namespace ghostproject.Controllers
                     Pris = b.Pris
 
                 }).ToListAsync();
+                foreach (Aksje alleAksje in alleAksjer)
+                {
+                    Console.WriteLine(alleAksje.Selskap);
+                }
                 return alleAksjer;
             }
             catch
@@ -73,7 +78,7 @@ namespace ghostproject.Controllers
             await _dbAksje.SaveChangesAsync();
         }
 
-        public double NextDouble(Random rand, double minVerdi, double maxVerdi, int runde)
+        private double NextDouble(Random rand, double minVerdi, double maxVerdi, int runde)
         {
             double randNummber = rand.NextDouble() * (maxVerdi - minVerdi) + minVerdi;
             return Convert.ToDouble(randNummber.ToString("f" + runde));

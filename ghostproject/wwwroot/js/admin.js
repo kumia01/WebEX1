@@ -106,6 +106,7 @@ function lagreTransaksjon() {
 
 function hentAlleAksjer() {
     $.get("../Aksje/HentAlle", function (Aksjer) {
+        console.log(Aksjer);
         formaterAksjer(Aksjer);
     });
 }
@@ -113,14 +114,14 @@ function hentAlleAksjer() {
 function formaterAksjer(Aksjer) {
     let ut = "<table class='table table-striped'>" +
         "<tr>" +
-        "<th>ID</th><th>Selskap</th>Ticker<th></th><th>Pris</th>" +
+        "<th>ID</th><th>Selskap</th><th>Ticker</th><th></th><th>Pris</th>" +
         "</tr>";
     for (let Aksje of Aksjer) {
         ut += "<tr>" +
-            "<td>" + Aksje.Id + "</td>" +
-            "<td>" + Aksje.Selskap + "</td>" +
-            "<td>" + Aksje.Ticker + "</td>" +
-            "<td>" + Aksje.Pris + "</td>" +
+            "<td>" + Aksje.id + "</td>" +
+            "<td>" + Aksje.selskap + "</td>" +
+            "<td>" + Aksje.ticker + "</td>" +
+            "<td>" + Aksje.pris + "</td>" +
             "</tr>";
     }
     ut += "</table>";

@@ -44,7 +44,7 @@ namespace ghostproject.Models
         public int? BrukereId { get; set; }
         public int? AksjeId { get; set; }
         virtual public Brukere Brukere { get; set; }
-        virtual public Aksje Aksje { get; set; }
+        virtual public FlereAksjer FlereAksjer { get; set; }
     }
 
     public class DB : DbContext
