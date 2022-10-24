@@ -1,5 +1,6 @@
 ﻿using ghostproject.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,22 +64,24 @@ namespace ghostproject.Controllers
 
         }
 
-        public async Task<List<Transaksjon>> HentAlleBrukerTransaksjoner(int brukerId)
+        /*public async Task<List<Transaksjon>> HentAlleBrukerTransaksjoner(int brukerId)
         {
             try
             {
+                //List<Transaksjoner> alleTransaksjoner = new List<Transaksjoner>();
+                Transaksjoner enTransaksjon = await _db.Transaksjoner.FindAsync(brukerId);
+                var alleTransaksjoner = new List<Transaksjoner>(
+                    from Transaksjoner in _db.Transaksjoner
+                    where Transaksjoner.BrukereId == brukerId
+                    select Transaksjoner
+                    ).ToListAsync();
 
-                var alleAksjer
-                /*List<Transaksjon> alleTransaksjoner = await _db.Transaksjoner.Select(t => new Transaksjon
-                {
-                    
-                        Id = t.Id,
-                        Volum = t.Volum,
-                        Pris = t.Pris,
-                        BrukereId = t.BrukereId,
-                        AksjeId = t.AksjeId
-                    
-                }).ToListAsync();*/
+                return alleTransaksjoner;
+
+                /*Transaksjon alleTransaksjoner = await _db.Transaksjoner.Select(t => t.BrukereId == brukerId).ToListAsync();
+
+                return alleTransaksjoner;*/
+                
             }
 
         }
