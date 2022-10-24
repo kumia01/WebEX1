@@ -51,7 +51,7 @@ namespace ghostproject.Controllers
                     Volum = t.Volum,
                     Pris = t.Pris,
                     BrukereId = t.BrukereId,
-                    AksjeId = t.AksjeId,
+                    AksjeId = t.AksjeId
 
                 }).ToListAsync();
                 return alleTransaksjoner;
@@ -59,6 +59,26 @@ namespace ghostproject.Controllers
             catch
             {
                 return null;
+            }
+
+        }
+
+        public async Task<List<Transaksjon>> HentAlleBrukerTransaksjoner(int brukerId)
+        {
+            try
+            {
+
+                var alleAksjer
+                /*List<Transaksjon> alleTransaksjoner = await _db.Transaksjoner.Select(t => new Transaksjon
+                {
+                    
+                        Id = t.Id,
+                        Volum = t.Volum,
+                        Pris = t.Pris,
+                        BrukereId = t.BrukereId,
+                        AksjeId = t.AksjeId
+                    
+                }).ToListAsync();*/
             }
 
         }
