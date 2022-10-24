@@ -15,13 +15,8 @@ namespace ghostproject.Models
         public string Etternavn { get; set; }
         public string Adresse { get; set; }
         virtual public Poststeder Poststed { get; set; }
-        virtual public Transaksjoner Transaksjon { get; set; }
+        virtual public List<Transaksjoner> Transaksjoner { get; set; }
     }
-
-    public class Transaksjoner
-    {
-
-    } 
 
     public class Poststeder
     {
@@ -33,6 +28,13 @@ namespace ghostproject.Models
     }
 
     public class Transaksjoner
+    {
+        public int Id { get; set; }
+        public int Volum { get; set; }
+        public int Pris { get; set; }
+        virtual public Brukere Brukere { get; set; }
+        virtual public Aksje Aksje { get; set; }
+    }
 
     public class DB : DbContext
     {
