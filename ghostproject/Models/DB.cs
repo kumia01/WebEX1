@@ -27,6 +27,15 @@ namespace ghostproject.Models
         virtual public List<Brukere> Brukere { get; set; }
     }
 
+    public class Transaksjoner
+    {
+        public int Id { get; set; }
+        public int Volum { get; set; }
+        public int Pris { get; set; }
+        virtual public Brukere Brukere { get; set; }
+        virtual public Aksje Aksje { get; set; }
+    }
+
     public class DB : DbContext
     {
         public DB(DbContextOptions<DB> options) : base(options)
