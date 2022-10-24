@@ -24,11 +24,11 @@ namespace ghostproject.Models
                 context.Database.EnsureCreated();
 
                 var poststed1 = new Poststeder { Postnr = "0372", Poststed = "Oslo" };
-                var aksje1 = new Aksje { Ticker = "NOK", Selskap = "Norske Kroner", Pris = 20, P1 = 1, P2 = 2, P3 = 3, P4 = 4, P5 = 5, P6 = 6, P7 = 7 };
+                var aksje1 = new FlereAksjer { Ticker = "NOK", Selskap = "Norske Kroner", Pris = 20 };
                 var bruker1 = new Brukere { Fornavn = "Ole", Etternavn = "Hansen", Adresse = "Olsloveien 82", Poststed = poststed1 };
 
-                var transaksjon1 = new Transaksjoner { Pris = aksje1.Pris, Volum = 200, Dato = "14/10/2022", Kjop = true };
-                var transaksjon2 = new Transaksjoner { Pris = aksje1.Pris, Volum = 200, Dato = "14/10/2022", Kjop = false };
+                var transaksjon1 = new Transaksjoner { Pris = aksje1.Pris, Volum = 200 };
+                var transaksjon2 = new Transaksjoner { Pris = aksje1.Pris, Volum = 200 };
 
 
                 var nyTransaksjon = new List<Transaksjoner>();
@@ -42,7 +42,7 @@ namespace ghostproject.Models
 
 
                 context.Brukere.Add(bruker1);
-                context.Aksje.Add(aksje1);
+                context.FlereAksjer.Add(aksje1);
 
                 context.SaveChanges();
             }
