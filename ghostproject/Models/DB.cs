@@ -40,6 +40,8 @@ namespace ghostproject.Models
         public int Id { get; set; }
         public int Volum { get; set; }
         public int Pris { get; set; }
+        public int? BrukereId { get; set; }
+        public int? AksjeId { get; set; }
         virtual public Brukere Brukere { get; set; }
         virtual public Aksje Aksje { get; set; }
     }

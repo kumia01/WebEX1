@@ -1,9 +1,10 @@
 ﻿using ghostproject.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 
 
 namespace ghostproject.Controllers
@@ -17,6 +18,8 @@ namespace ghostproject.Controllers
             _db = db;
         }
 
+
+
         public async Task<bool> Lagre(Transaksjon innTransaksjon)
         {
             try
@@ -24,8 +27,10 @@ namespace ghostproject.Controllers
                 var nyTransaksjonsRad = new Transaksjoner();
                 nyTransaksjonsRad.Volum = innTransaksjon.Volum;
                 nyTransaksjonsRad.Pris = innTransaksjon.Pris;
-                nyTransaksjonsRad.Brukere = innTransaksjon.Bru
+                nyTransaksjonsRad.BrukereId = innTransaksjon.BrukereId;
+                nyTransaksjonsRad.AksjeId = innTransaksjon.AksjeId;
                 
+
                 _db.Transaksjoner.Add(nyTransaksjonsRad);
                 await _db.SaveChangesAsync();
                 return true;
@@ -34,6 +39,28 @@ namespace ghostproject.Controllers
             {
                 return false;
             }
+        }
+
+        public async Task<List<Transaksjon>> HentAlle()
+        {
+            try
+            {
+                List<Transaksjon> alleTransaksjoner = await _db.Transaksjoner.Select(t => new Transaksjon
+                {
+                    Id = t.Id,
+                    Volum = t.Volum,
+                    Pris = t.Pris,
+                    BrukereId = t.BrukereId,
+                    AksjeId = t.AksjeId,
+
+                }).ToListAsync();
+                return alleTransaksjoner;
+            }
+            catch
+            {
+                return null;
+            }
+
         }
     }
 }

@@ -5,5 +5,7 @@
         public int Id { get; set; }
         public int Volum { get; set; }
         public int Pris { get; set; }
+        public int? BrukereId { get; set; }
+        public int? AksjeId { get; set; }
     }
 }

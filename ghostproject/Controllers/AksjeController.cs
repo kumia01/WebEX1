@@ -1,6 +1,7 @@
 ﻿using ghostproject.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -62,14 +63,22 @@ namespace ghostproject.Controllers
             }).ToListAsync();
             foreach (Aksje i in alleAksjer)
             {
+                Random rand = new Random();
                 var endreobjekt = await _dbAksje.FlereAksjer.FindAsync(i.Id);
-                int nyPris = 10;
+                int nyPris = Convert.ToInt32(endreobjekt.Pris * NextDouble(rand, 1.2,0.8,2));
                 endreobjekt.Pris = nyPris;
 
 
             }
             await _dbAksje.SaveChangesAsync();
         }
+
+        public double NextDouble(Random rand, double minVerdi, double maxVerdi, int runde)
+        {
+            double randNummber = rand.NextDouble() * (maxVerdi - minVerdi) + minVerdi;
+            return Convert.ToDouble(randNummber.ToString("f" + runde));
+        }
+       
         
     }
 }
