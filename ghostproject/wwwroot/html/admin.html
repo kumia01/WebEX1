@@ -8,14 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
-    <input placeholder="Fornavn" maxlength="255" type="text" id="testFornavn">
-    <input placeholder="Etternavn" maxlength="255" type="text" id="testEtternavn">
+    <input id="id">
+    <input id="aksjeid">
+    <input placeholder="Volum" maxlength="255" type="text" id="testVolum">
+    <input placeholder="Pris" maxlength="255" type="text" id="testPris">
     <input placeholder="Adresse" maxlength="255" type="text" id="testAdresse">
     <input placeholder="PostNr" maxlength="255" type="text" id="testPostNr">
     <input placeholder="Poststed" maxlength="255" type="text" id="testPoststed">
-    <button class="btn btn-secondary" onclick="lagreBruker()">Lagre</button>
+    <button class="btn btn-secondary" onclick="lagreTransaksjon()">Lagre</button>
     <button class="btn btn-secondary" id="btnSkriv">Skriv Ut</button>
-    <div id="testBrukere"></div>
+    <div id="testTransaksjon"></div>
     <div id="feil"></div>
 </body>
 </html>
