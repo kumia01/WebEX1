@@ -27,6 +27,14 @@ namespace ghostproject.Models
         virtual public List<Brukere> Brukere { get; set; }
     }
 
+    public class FlereAksjer
+    {
+        public int Id { get; set; }
+        public string Ticker { get; set; }
+        public string Selskap { get; set; }
+        public int Pris { get; set; }
+    }
+
     public class Transaksjoner
     {
         public int Id { get; set; }
@@ -44,7 +52,7 @@ namespace ghostproject.Models
         }
 
         virtual public DbSet<Brukere> Brukere { get; set; }
-        virtual public DbSet<Aksje> Aksje { get; set; }
+        virtual public DbSet<FlereAksjer> FlereAksjer { get; set; }
         virtual public DbSet<Poststeder> Poststeder { get; set; }
         virtual public DbSet<Transaksjoner> Transaksjoner { get; set; }
 
