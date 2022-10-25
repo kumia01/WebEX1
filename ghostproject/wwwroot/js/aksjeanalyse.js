@@ -5,7 +5,7 @@
 function hentAlleAksjer() {
 
 //Begynnelse på å liste alle aksjer i kundeanalyse
-    $.get("aksje/hentAlle", function (aksjer) {
+    $.get("../Aksje/HentAlle", function (aksjer) {
         formaterAksjer(aksjer);
     });
 }
