@@ -12,7 +12,7 @@ function hentAlleAksjer() {
 function formaterAksjer(Aksjer) {
     let ut = "<table class='table table-striped'>" +
         "<tr>" +
-        "<th>ID</th><th>Selskap</th><th>Ticker</th><th></th><th>Pris</th><th>Prisendring</th>" +
+        "<th>ID</th><th>Selskap</th><th>Ticker</th><th>Pris</th><th>Prisendring</th>" +
         "</tr>";
 
 
