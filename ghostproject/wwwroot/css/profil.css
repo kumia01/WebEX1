@@ -1,3 +1,13 @@
-﻿#infoTextBox {
+﻿#infoboks{
+    padding-top: 30px;
+}
+
+#kolonne1 {
+    background-color: #CDCDCD;
+}
+
+
+
+#infoTextBox {
     background-color: grey;
 }
