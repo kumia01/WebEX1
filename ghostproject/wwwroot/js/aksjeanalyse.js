@@ -18,9 +18,11 @@ function formaterAksjer(Aksjer) {
 
 
     for (let Aksje of Aksjer) {
-        int sum = (Aksje.gammelPris - Aksje.pris) / Aksje.pris
+        const sum = (Aksje.gammelPris - Aksje.pris) / Aksje.pris
 
         if (sum < 0) {
+
+                sum.style.color = 'red';
 
             ut += "<tr>" +
                 "<td>" + Aksje.id + "</td>" +
@@ -30,6 +32,9 @@ function formaterAksjer(Aksjer) {
                 + "<td>" + sum + "</td>"
             "</tr>";
         } else {
+                 
+            sum.style.color = 'green';
+
             ut += "<tr>" +
                 "<td>" + Aksje.id + "</td>" +
                 "<td>" + Aksje.selskap + "</td>" +
@@ -42,6 +47,6 @@ function formaterAksjer(Aksjer) {
     }
     
     ut += "</table>";
-    $("#testAksje").html(ut);
+    $("#aksjene").html(ut);
 }
 

@@ -92,133 +92,138 @@
     </div>
 
 
-   <div>
-        <table class="table bg-*">
-            <thead style="color: #0027FF">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Bedriftnavn</th>
-                    <th scope="col">Ticker</th>
-                    <th scope="col">Pris</th>
-                    <th scope="col">Pris-endring</th>
-                    <th scope="col">Kjøp / Selg</th>
-                </tr>
-            </thead>
-            <!--<tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>2020 Bulkers</td>
-                    <td>2020</td>
-                    <td>24,84</td>
-                    <td>0,50%</td>
-                    <td>
-                        <button type="button" class="btn btn-success">Kjøp</button>
-                        <button type="button" class="btn btn-danger">Selg</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Telenor</td>
-                    <td>TEL</td>
-                    <td>94,84</td>
-                    <td>0,11%</td>
-                    <td>
-                        <button type="button" class="btn btn-success">Kjøp</button>
-                        <button type="button" class="btn btn-danger">Selg</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>ABL Group ASA</td>
-                    <td>ABL</td>
-                    <td>23,14</td>
-                    <td>6,11%</td>
-                    <td>
-                        <button type="button" class="btn btn-success">Kjøp</button>
-                        <button type="button" class="btn btn-danger">Selg</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Adevinta</td>
-                    <td>ADE</td>
-                    <td>54,91</td>
-                    <td>0,87%</td>
-                    <td>
-                        <button type="button" class="btn btn-success">Kjøp</button>
-                        <button type="button" class="btn btn-danger">Selg</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Aker</td>
-                    <td>AKER</td>
-                    <td>12,12</td>
-                    <td>12.12%</td>
-                    <td>
-                        <button type="button" class="btn btn-success">Kjøp</button>
-                        <button type="button" class="btn btn-danger">Selg</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>Salmar</td>
-                    <td>SALM</td>
-                    <td>4,84</td>
-                    <td>-0,12%</td>
-                    <td>
-                        <button type="button" class="btn btn-success">Kjøp</button>
-                        <button type="button" class="btn btn-danger">Selg</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td>REC SILICON</td>
-                    <td>REC</td>
-                    <td>73,84</td>
-                    <td>23.2%</td>
-                    <td>
-                        <button type="button" class="btn btn-success">Kjøp</button>
-                        <button type="button" class="btn btn-danger">Selg</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">8</th>
-                    <td>NEL</td>
-                    <td>NEL</td>
-                    <td>19,0</td>
-                    <td>0,98%</td>
-                    <td>
-                        <button type="button" class="btn btn-success">Kjøp</button>
-                        <button type="button" class="btn btn-danger">Selg</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">9</th>
-                    <td>DNO</td>
-                    <td>DNO</td>
-                    <td>65,84</td>
-                    <td>3.86%</td>
-                    <td>
-                        <button type="button" class="btn btn-success">Kjøp</button>
-                        <button type="button" class="btn btn-danger">Selg</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">10</th>
-                    <td>STOREBRAND</td>
-                    <td>STB</td>
-                    <td>03,84</td>
-                    <td>0,01%</td>
-                    <td>
-                        <button type="button" class="btn btn-success">Kjøp</button>
-                        <button type="button" class="btn btn-danger">Selg</button>
-                    </td>
-                </tr>
-            </tbody>
-                -->
-        </table>
-    </div>
-     
+
+    <div id="akjsene"></div>
+
+
+    <!--<div>
+            <table class="table bg-*">
+                <thead style="color: #0027FF">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Bedriftnavn</th>
+                        <th scope="col">Ticker</th>
+                        <th scope="col">Pris</th>
+                        <th scope="col">Pris-endring</th>
+                        <th scope="col">Kjøp / Selg</th>
+                    </tr>
+                </thead>
+                <!--<tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>2020 Bulkers</td>
+                        <td>2020</td>
+                        <td>24,84</td>
+                        <td>0,50%</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Kjøp</button>
+                            <button type="button" class="btn btn-danger">Selg</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Telenor</td>
+                        <td>TEL</td>
+                        <td>94,84</td>
+                        <td>0,11%</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Kjøp</button>
+                            <button type="button" class="btn btn-danger">Selg</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>ABL Group ASA</td>
+                        <td>ABL</td>
+                        <td>23,14</td>
+                        <td>6,11%</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Kjøp</button>
+                            <button type="button" class="btn btn-danger">Selg</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Adevinta</td>
+                        <td>ADE</td>
+                        <td>54,91</td>
+                        <td>0,87%</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Kjøp</button>
+                            <button type="button" class="btn btn-danger">Selg</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Aker</td>
+                        <td>AKER</td>
+                        <td>12,12</td>
+                        <td>12.12%</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Kjøp</button>
+                            <button type="button" class="btn btn-danger">Selg</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Salmar</td>
+                        <td>SALM</td>
+                        <td>4,84</td>
+                        <td>-0,12%</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Kjøp</button>
+                            <button type="button" class="btn btn-danger">Selg</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>REC SILICON</td>
+                        <td>REC</td>
+                        <td>73,84</td>
+                        <td>23.2%</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Kjøp</button>
+                            <button type="button" class="btn btn-danger">Selg</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>NEL</td>
+                        <td>NEL</td>
+                        <td>19,0</td>
+                        <td>0,98%</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Kjøp</button>
+                            <button type="button" class="btn btn-danger">Selg</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>DNO</td>
+                        <td>DNO</td>
+                        <td>65,84</td>
+                        <td>3.86%</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Kjøp</button>
+                            <button type="button" class="btn btn-danger">Selg</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>STOREBRAND</td>
+                        <td>STB</td>
+                        <td>03,84</td>
+                        <td>0,01%</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Kjøp</button>
+                            <button type="button" class="btn btn-danger">Selg</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+         -->
+
 </body>
 </html>
