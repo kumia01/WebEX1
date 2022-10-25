@@ -1,6 +1,7 @@
-﻿$(funtion(){
+﻿$(document).ready(function () {
     hentAlleAksjer();
 });
+
 
 
 function hentAlleAksjer() {
@@ -10,14 +11,14 @@ function hentAlleAksjer() {
         formaterAksjer(aksjer);
     });
 }
-function formaterAksjer(Aksjer) {
+function formaterAksjer(aksjer) {
     let ut = "<table class='table table-striped'>" +
         "<tr>" +
         "<th>ID</th><th>Selskap</th><th>Ticker</th><th></th><th>Pris</th><th>Prisendring</th>" +
         "</tr>";
 
 
-    for (let Aksje of Aksjer) {
+    for (let Aksje of aksjer) {
         const sum = (Aksje.gammelPris - Aksje.pris) / Aksje.pris
 
         if (sum < 0) {
