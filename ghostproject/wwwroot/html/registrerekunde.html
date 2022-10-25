@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!--<script src="registrerekunde.js"></script>-->
+    <script src="../js/registrerekunde.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/registrerekunde.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
@@ -91,33 +91,33 @@
                     <div class="col-md-4">
 
                         <div class="form-group">
-                            <label for="persnr">Ditt fødselsnummer (ddmmååxxxxx)</label>
-                            <input type="text" class="form-control" id="personnummer" required="recuired">
-                        </div>
-
-                        <div class="form-group">
                             <label for="fornavn">Fornavn</label>
-                            <input type="text" class="form-control" id="fornavn" required="recuired">
+                            <input type="text" placeholder="Fornavn" class="form-control" id="fornavn" required="required">
                         </div>
 
                         <div class="form-group">
-                            <label for="etternavn">Ettenavn</label>
-                            <input type="text" class="form-control" id="etternavn" required="recuired">
+                            <label for="etternavn">Etternavn</label>
+                            <input type="text" placeholder="Etternavn" class="form-control" id="etternavn" required="required">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email Adresse</label>
-                            <input type="text" class="form-control" id="email" required="recuired">
+                            <label for="adresse">Adresse</label>
+                            <input type="text" placeholder="Adresse" class="form-control" id="adresse" required="required">
                         </div>
 
                         <div class="form-group">
-                            <label for="passord">Passord</label>
-                            <input type="text" class="form-control" id="passord" required="recuired">
+                            <label for="postnr">Postnr</label>
+                            <input type="text" placeholder="Postnr" class="form-control" id="postnr" required="required">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="poststed">Poststed</label>
+                            <input type="text" placeholder="Poststed" class="form-control" id="poststed" required="required">
                         </div>
 
                         <div class="form-group">
                             <div class="regknapp">
-                            <button type="submit" class="btn btn-primary btn-sm">Lag Bruker</button>
+                            <button class="btn btn-primary" onclick="lagreBruker()">Lag Bruker</button>
                        </div>
                         </div>
 
@@ -126,7 +126,7 @@
                     <!-- Legger til bilde til registreringsiden
                     <div class="col-sm-4">
                         <div class="bilde">
-                            <img src="https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg" class="float-right" alt="mann" width="400" height="500">
+                            <img src="ht""tps://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg" class="float-right" alt="mann" width="400" height="500">
                                 </div>
                          </div> -->
 

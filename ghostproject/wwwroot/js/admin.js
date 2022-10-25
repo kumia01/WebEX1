@@ -42,12 +42,16 @@ function formaterTransaksjon(Transaksjon) {
 
 
 function hentBrukerTransaksjoner() {
-    const brukerId = "brukerId=4"
+    const brukerId = "brukerId=4";
     const url = "../Transaksjon/HentBrukerTransaksjoner?" + brukerId;
     $.get(url, function (Transaksjon) {
         console.log(Transaksjon);
         formaterTransaksjon(Transaksjon);
     });
+}
+
+function hentBrukerTransaksjoner() {
+    const aksjeId = "aksjeId=1";
 }
 
 
