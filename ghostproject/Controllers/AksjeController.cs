@@ -35,10 +35,7 @@ namespace ghostproject.Controllers
                     gammelPris = b.gammelPris
 
                 }).ToListAsync();
-                foreach (Aksje alleAksje in alleAksjer)
-                {
-                    Console.WriteLine(alleAksje.Selskap);
-                }
+                
                 return alleAksjer;
             }
             catch

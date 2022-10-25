@@ -5,18 +5,18 @@
 function hentAlleAksjer() {
 
 //Begynnelse på å liste alle aksjer i kundeanalyse
-    $.get("../Aksje/HentAlle", function (aksjer) {
-        formaterAksjer(aksjer);
+    $.get("../Aksje/HentAlle", function (Aksjer) {
+        formaterAksjer(Aksjer);
     });
 }
-function formaterAksjer(aksjer) {
+function formaterAksjer(Aksjer) {
     let ut = "<table class='table table-striped'>" +
         "<tr>" +
         "<th>ID</th><th>Selskap</th><th>Ticker</th><th></th><th>Pris</th><th>Prisendring</th>" +
         "</tr>";
 
 
-    for (let Aksje of aksjer) {
+    for (let Aksje of Aksjer) {
         const sum = (Aksje.gammelPris - Aksje.pris) / Aksje.pris
     
         if (sum < 0) {
