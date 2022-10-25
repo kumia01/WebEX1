@@ -38,9 +38,6 @@ namespace ghostproject.Models
                 aksje1.Transaksjoner = nyTransaksjon;
 
 
-                //context.Poststeder.Add(poststed1);
-
-
                 context.Brukere.Add(bruker1);
                 context.FlereAksjer.Add(aksje1);
 

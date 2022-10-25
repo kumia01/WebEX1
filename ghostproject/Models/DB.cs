@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System;
-using System.Text;
 using System.ComponentModel.DataAnnotations;
 
 namespace ghostproject.Models
 {
+
+    //Oppretter tabellen brukere
     public class Brukere
     {
         public int Id { get; set; }
@@ -18,6 +18,7 @@ namespace ghostproject.Models
         virtual public List<Transaksjoner> Transaksjoner { get; set; }
     }
 
+    //Oppretter tabellen poststeder
     public class Poststeder
     {
         [Key]
@@ -27,6 +28,7 @@ namespace ghostproject.Models
         virtual public List<Brukere> Brukere { get; set; }
     }
 
+    //Oppretter tabellen
     public class FlereAksjer
     {
         public int Id { get; set; }
@@ -37,6 +39,7 @@ namespace ghostproject.Models
         virtual public List<Transaksjoner> Transaksjoner { get; set; }
     }
 
+    //Oppretter tabellen transaksjoner
     public class Transaksjoner
     {
         public int Id { get; set; }

@@ -22,6 +22,7 @@ namespace ghostproject.Controllers
             _dbAksje = db;
         }
 
+        //Henter alle aksjer fra DB og returner liste med Aksje objekter
         public async Task<List<Aksje>> HentAlle()
         {
             try
@@ -44,6 +45,7 @@ namespace ghostproject.Controllers
             }
         }
 
+        //Henter en aksje fra DB ved hjelp av aksje id
         public async Task<Aksje> HentEn(int id)
         {
             FlereAksjer enAksje = await _dbAksje.FlereAksjer.FindAsync(id);
@@ -58,6 +60,7 @@ namespace ghostproject.Controllers
             return hentetAskje;
         }
 
+        //Endrer prisen på alle aksjer i DB, setter den eldre prisen til gammelPris
         public async void endrePris()
         {
             List<Aksje> alleAksjer = await _dbAksje.FlereAksjer.Select(b => new Aksje
@@ -69,7 +72,7 @@ namespace ghostproject.Controllers
                 Random rand = new Random();
                 var endreobjekt = await _dbAksje.FlereAksjer.FindAsync(i.Id);
                 endreobjekt.gammelPris = endreobjekt.Pris;
-                int nyPris = Convert.ToInt32(endreobjekt.Pris * NextDouble(rand, 1.2,0.8,2));
+                int nyPris = Convert.ToInt32(endreobjekt.Pris * NextDouble(rand, 1.2,0.8,2)); //ny pris blir satt ved å bruke en tilfeldig vekstfaktor på mellom 0.8-1.2, max/min vekst på 20%
                 endreobjekt.Pris = nyPris;
 
 
@@ -77,6 +80,7 @@ namespace ghostproject.Controllers
             await _dbAksje.SaveChangesAsync();
         }
 
+        
         private double NextDouble(Random rand, double minVerdi, double maxVerdi, int runde)
         {
             double randNummber = rand.NextDouble() * (maxVerdi - minVerdi) + minVerdi;
