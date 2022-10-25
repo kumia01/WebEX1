@@ -2,8 +2,6 @@
     hentAlleAksjer();
 });
 
-
-
 function hentAlleAksjer() {
 
 //Begynnelse på å liste alle aksjer i kundeanalyse
@@ -20,7 +18,7 @@ function formaterAksjer(aksjer) {
 
     for (let Aksje of aksjer) {
         const sum = (Aksje.gammelPris - Aksje.pris) / Aksje.pris
-
+    
         if (sum < 0) {
 
                 sum.style.color = 'red';
@@ -45,6 +43,7 @@ function formaterAksjer(aksjer) {
             "</tr>";
 
         }
+        console.log(sum)
     }
     
     ut += "</table>";

@@ -24,7 +24,7 @@ namespace ghostproject.Models
                 context.Database.EnsureCreated();
 
                 var poststed1 = new Poststeder { Postnr = "0372", Poststed = "Oslo" };
-                var aksje1 = new FlereAksjer { Ticker = "NOK", Selskap = "Norske Kroner", Pris = 20 };
+                var aksje1 = new FlereAksjer { Ticker = "NOK", Selskap = "Norske Kroner", Pris = 20, gammelPris = 0 };
                 var bruker1 = new Brukere { Fornavn = "Ole", Etternavn = "Hansen", Adresse = "Olsloveien 82", Poststed = poststed1 };
 
                 var transaksjon1 = new Transaksjoner { Pris = aksje1.Pris, Volum = 200 };
