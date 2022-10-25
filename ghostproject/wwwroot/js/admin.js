@@ -2,19 +2,23 @@
 
     //const id = window.location.search.substring(1);
     //const url = "../Bruker/HentEn?" + id;
-    
-    $("#id").val(1); // må ha med id inn skjemaet, hidden i html
-    $("#aksjeid").val(1);
+
+    $("#BrukereId").val(4); // må ha med id inn skjemaet, hidden i html
+    $("#FlereAksjerId").val(2);
     
 
     $("#btnSkriv").click(function () {
-        hentAlleTransaksjoner();
+        //hentAlleTransaksjoner();
+        hentBrukerTransaksjoner();
     });
+    //hentAlleTransaksjoner();
+    hentBrukerTransaksjoner();
     hentAlleAksjer();
 });
 
 function hentAlleTransaksjoner() {
     $.get("../Transaksjon/HentAlle", function (Transaksjon) {
+        console.log(Transaksjon);
         formaterTransaksjon(Transaksjon);
     });
 }
@@ -22,16 +26,28 @@ function hentAlleTransaksjoner() {
 function formaterTransaksjon(Transaksjon) {
     let ut = "<table class='table table-striped'>" +
         "<tr>" +
-        "<th>Volum</th><th>Pris</th><th></th><th></th>" +
+        "<th>Volum</th><th>Pris</th><th>BrukereId</th><th>FlereAksjerId</th>" +
         "</tr>";
     for (let transaksjon of Transaksjon) {
         ut += "<tr>" +
             "<td>" + transaksjon.volum + "</td>" +
             "<td>" + transaksjon.pris + "</td>" +
+            "<td>" + transaksjon.brukereId + "</td>" +
+            "<td>" + transaksjon.flereAksjerId + "</td>" +
             "</tr>";
     }
     ut += "</table>";
     $("#testTransaksjon").html(ut);
+}
+
+
+function hentBrukerTransaksjoner() {
+    const brukerId = "brukerId=4"
+    const url = "../Transaksjon/HentBrukerTransaksjoner?" + brukerId;
+    $.get(url, function (Transaksjon) {
+        console.log(Transaksjon);
+        formaterTransaksjon(Transaksjon);
+    });
 }
 
 
@@ -85,16 +101,18 @@ function lagreBruker() {
         });
 }
 
+
+
 function lagreTransaksjon() {
-    const transaksjon = {
+    const Transaksjon = {
         Volum: $("#testVolum").val(),
         Pris: $("#testPris").val(),
-        BrukereId: $("#id").val(),
-        AksjeId: $("#aksjeid").val()
+        BrukereId: $("#BrukereId").val(),
+        FlereAksjerId: $("#FlereAksjerId").val()
     }
     const url = "../Transaksjon/Lagre";
-    console.log(transaksjon);
-    $.post(url, transaksjon, function (OK) {
+    console.log(Transaksjon);
+    $.post(url, Transaksjon, function (OK) {
         if (OK) {
             $("#feil").html("Lagt inn i db");
         }

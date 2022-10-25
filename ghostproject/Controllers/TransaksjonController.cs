@@ -29,8 +29,8 @@ namespace ghostproject.Controllers
                 nyTransaksjonsRad.Volum = innTransaksjon.Volum;
                 nyTransaksjonsRad.Pris = innTransaksjon.Pris;
                 nyTransaksjonsRad.BrukereId = innTransaksjon.BrukereId;
-                nyTransaksjonsRad.AksjeId = innTransaksjon.AksjeId;
-                
+                nyTransaksjonsRad.FlereAksjerId = innTransaksjon.FlereAksjerId;
+
 
                 _db.Transaksjoner.Add(nyTransaksjonsRad);
                 await _db.SaveChangesAsync();
@@ -52,7 +52,7 @@ namespace ghostproject.Controllers
                     Volum = t.Volum,
                     Pris = t.Pris,
                     BrukereId = t.BrukereId,
-                    AksjeId = t.AksjeId
+                    FlereAksjerId = t.FlereAksjerId
 
                 }).ToListAsync();
                 return alleTransaksjoner;
@@ -64,24 +64,47 @@ namespace ghostproject.Controllers
 
         }
 
-        /*public async Task<List<Transaksjon>> HentAlleBrukerTransaksjoner(int brukerId)
+        public async Task<List<Transaksjon>> HentBrukerTransaksjoner(int brukerId)
         {
             try
             {
-                //List<Transaksjoner> alleTransaksjoner = new List<Transaksjoner>();
-                Transaksjoner enTransaksjon = await _db.Transaksjoner.FindAsync(brukerId);
-                var alleTransaksjoner = new List<Transaksjoner>(
-                    from Transaksjoner in _db.Transaksjoner
-                    where Transaksjoner.BrukereId == brukerId
-                    select Transaksjoner
-                    ).ToListAsync();
-
+                List<Transaksjon> alleTransaksjoner = await _db.Transaksjoner.Select(t => new Transaksjon
+                {
+                    Id = t.Id,
+                    Volum = t.Volum,
+                    Pris = t.Pris,
+                    BrukereId = t.BrukereId,
+                    FlereAksjerId = t.FlereAksjerId
+                }).Where(t => t.BrukereId == brukerId).ToListAsync();
                 return alleTransaksjoner;
 
-                /*Transaksjon alleTransaksjoner = await _db.Transaksjoner.Select(t => t.BrukereId == brukerId).ToListAsync();
-
-                return alleTransaksjoner;*/
-                
+            }
+            catch
+            {
+                return null;
             }
 
         }
+
+        public async Task<List<Transaksjon>> HentAksjeTransaksjoner(int aksjeId)
+        {
+            try
+            {
+                List<Transaksjon> alleTransaksjoner = await _db.Transaksjoner.Select(t => new Transaksjon
+                {
+                    Id = t.Id,
+                    Volum = t.Volum,
+                    Pris = t.Pris,
+                    BrukereId = t.BrukereId,
+                    FlereAksjerId = t.FlereAksjerId
+                }).Where(t => t.FlereAksjerId == aksjeId).ToListAsync();
+                return alleTransaksjoner;
+
+            }
+            catch
+            {
+                return null;
+            }
+        }
+    }
+}
