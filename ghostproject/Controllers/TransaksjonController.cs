@@ -1,6 +1,5 @@
 ﻿using ghostproject.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +19,7 @@ namespace ghostproject.Controllers
         }
 
 
-
+        //Lagrer en ny rad i databasen med innTransaksjon, ved kjøp og salg
         public async Task<bool> Lagre(Transaksjon innTransaksjon)
         {
             try
@@ -42,6 +41,7 @@ namespace ghostproject.Controllers
             }
         }
 
+        //Henter alle transaksjoner fra databasen og oppretter en liste med objektene
         public async Task<List<Transaksjon>> HentAlle()
         {
             try
@@ -64,6 +64,7 @@ namespace ghostproject.Controllers
 
         }
 
+        //Henter alle transaksjoner til en bruker ved hjelp av brukerId
         public async Task<List<Transaksjon>> HentBrukerTransaksjoner(int brukerId)
         {
             try
@@ -86,7 +87,8 @@ namespace ghostproject.Controllers
 
         }
 
-        public async Task<List<Transaksjon>> HentAksjeTransaksjoner(int aksjeId)
+        //Henter alle transaksjoner til en aksje ved hjelp av aksjeId
+        public async Task<List<Transaksjon>> HentAksjeTransaksjoner(int aksjeId) 
         {
             try
             {

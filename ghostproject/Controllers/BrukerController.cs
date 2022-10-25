@@ -21,12 +21,13 @@ namespace ghostproject.Controllers
             _db = db;
         }
 
+        //Lager en ny rad i brukere tabellen med innbruker når en bruker registrerer en kunde,
+        //lager også ny rad i poststeder tabellen om poststed ikke finnes fra før av
         public async Task<bool> Lagre(Bruker innBruker)
         {
             try
             {
                 var nyBrukerRad = new Brukere();
-                //nyBrukerRad.Personnr = innBruker.Personnr;
                 nyBrukerRad.Fornavn = innBruker.Fornavn;
                 nyBrukerRad.Etternavn = innBruker.Etternavn;
                 nyBrukerRad.Adresse = innBruker.Adresse;
@@ -52,6 +53,8 @@ namespace ghostproject.Controllers
                 return false;
             }
         }
+
+        //Henter alle brukere fra brukere tabellen i DB, returnerer liste av Bruker objekt
         public async Task<List<Bruker>> HentAlle()
         {
             try
@@ -59,7 +62,6 @@ namespace ghostproject.Controllers
                 List<Bruker> alleBrukere = await _db.Brukere.Select(b => new Bruker
                 {
                     Id = b.Id,
-                    //Personnr = b.Personnr,
                     Fornavn = b.Fornavn,
                     Etternavn = b.Etternavn,
                     Adresse = b.Adresse,
@@ -73,6 +75,8 @@ namespace ghostproject.Controllers
                 return null;
             }
         }
+
+        //Sletter en brukerrad ved hjelp av bruker id
         public async Task<bool> Slett(int id)
         {
             try
@@ -88,7 +92,7 @@ namespace ghostproject.Controllers
             }
         }
 
-
+        //Henter en bruker fra DB ve hjelp av bruker id
         public async Task<Bruker> HentEn(int id)
         {
             Brukere enBruker = await _db.Brukere.FindAsync(id);
@@ -104,6 +108,8 @@ namespace ghostproject.Controllers
             };
             return hentetBruker;
         }
+
+        //Endrer en bruker ved hjelp av bruker id og redigerer brukerraden i DB
         public async Task<bool> Endre(Bruker endreBruker)
         {
             try
