@@ -24,7 +24,6 @@ namespace ghostproject.Controllers
 
         public async Task<List<Aksje>> HentAlle()
         {
-            Console.WriteLine("koden kjører");
             try
             {
                 List<Aksje> alleAksjer = await _dbAksje.FlereAksjer.Select(b => new Aksje
@@ -32,7 +31,8 @@ namespace ghostproject.Controllers
                     Id = b.Id,
                     Ticker = b.Ticker,
                     Selskap = b.Selskap,
-                    Pris = b.Pris
+                    Pris = b.Pris,
+                    gammelPris = b.gammelPris
 
                 }).ToListAsync();
                 foreach (Aksje alleAksje in alleAksjer)
@@ -55,7 +55,8 @@ namespace ghostproject.Controllers
                 Id = enAksje.Id,
                 Ticker = enAksje.Ticker,
                 Selskap = enAksje.Selskap,
-                Pris = enAksje.Pris
+                Pris = enAksje.Pris,
+                gammelPris = enAksje.gammelPris
             };
             return hentetAskje;
         }
@@ -70,6 +71,7 @@ namespace ghostproject.Controllers
             {
                 Random rand = new Random();
                 var endreobjekt = await _dbAksje.FlereAksjer.FindAsync(i.Id);
+                endreobjekt.gammelPris = endreobjekt.Pris;
                 int nyPris = Convert.ToInt32(endreobjekt.Pris * NextDouble(rand, 1.2,0.8,2));
                 endreobjekt.Pris = nyPris;
 
