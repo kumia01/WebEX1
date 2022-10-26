@@ -37,6 +37,7 @@ namespace ghostproject.Models
         public int Pris { get; set; }
         public int gammelPris { get; set; }
         virtual public List<Transaksjoner> Transaksjoner { get; set; }
+
     }
 
     //Oppretter tabellen transaksjoner

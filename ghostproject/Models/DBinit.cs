@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ghostproject.Models;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace ghostproject.Models
 {
@@ -42,6 +42,7 @@ namespace ghostproject.Models
                 context.FlereAksjer.Add(aksje1);
 
                 context.SaveChanges();
+                
             }
         }
     }
