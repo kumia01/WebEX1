@@ -1,12 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
-using System;
-using System.Reflection;
-using System.Linq;
-using System.Threading.Tasks;
-using ghostproject.Models;
-using Microsoft.AspNetCore.Mvc;
+
 
 
 namespace ghostproject.Models

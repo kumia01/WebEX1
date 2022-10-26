@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace ghostproject.Models
 {
 
-    //Oppretter tabellen brukere
+    //Oppretter tabellen brukere, med forhold til Poststeder og Transaksjoner
     public class Brukere
     {
         public int Id { get; set; }
@@ -18,7 +18,7 @@ namespace ghostproject.Models
         virtual public List<Transaksjoner> Transaksjoner { get; set; }
     }
 
-    //Oppretter tabellen poststeder
+    //Oppretter tabellen poststeder, med forhold til Brukere
     public class Poststeder
     {
         [Key]
@@ -28,7 +28,7 @@ namespace ghostproject.Models
         virtual public List<Brukere> Brukere { get; set; }
     }
 
-    //Oppretter tabellen
+    //Oppretter tabellen FlereAksjer, med forhold til Transaksjoner
     public class FlereAksjer
     {
         public int Id { get; set; }
@@ -39,7 +39,7 @@ namespace ghostproject.Models
         virtual public List<Transaksjoner> Transaksjoner { get; set; }
     }
 
-    //Oppretter tabellen transaksjoner
+    //Oppretter tabellen transaksjoner, med forhold til Brukere og FlereAksjer
     public class Transaksjoner
     {
         public int Id { get; set; }

@@ -9,42 +9,34 @@ function hentAlleAksjer() {
         formaterAksjer(Aksjer);
     });
 }
+//Formaterer alle aksjene
 function formaterAksjer(Aksjer) {
     let ut = "<table class='table table-striped'>" +
         "<tr>" +
-        "<th>ID</th><th>Selskap</th><th>Ticker</th><th>Pris</th><th>Prisendring</th><th>Kjøp</th><th>Salg</th>" +
+        "   <th>Selskap</th><th>Ticker</th><th>Pris</th><th>Prisendring</th><th>Kjøp</th><th>Salg</th>" +
          
         "</tr>";
 
 
     for (let Aksje of Aksjer) {
-        const sum = ((Aksje.pris - Aksje.gammelPris) / Aksje.gammelPris) * 100;
-        if (sum < 0) {
-
-                //sum.style.color = 'red';
-
+        const sum = ((Aksje.pris - Aksje.gammelPris) / Aksje.gammelPris) * 100; //Regner ut prisendringen til hver aksje i %
+        if (sum < 0) { //Hvis prisendringen til en aksje er negativ vil det sette prisendringen til rød
             ut += "<tr>" +
-                "<td>" + Aksje.id + "</td>" +
                 "<td>" + Aksje.selskap + "</td>" +
                 "<td>" + Aksje.ticker + "</td>" +
                 "<td>" + Aksje.pris + "</td>" +
-                + "<td>" + sum + "%" + "</td>" +
-                '<td><button type="button" class="btn btn-success">Kjøp</button> </td>' +
-                '<td><button type="button" class="btn btn-danger">Selg</button></td>' + 
+                '<td style="color: red;">' + sum + "%" + "</td>" +
+                "<td> <a class='btn btn-success' href='endre.html?id=" + Aksje.id + "'>Kjøp</a></td>" +
+                "<td> <a class='btn btn-danger' href='endre.html?id=" + Aksje.id + "'>Selg</a></td>" + 
             "</tr>";
-        } else {
-                 
-           // sum.style.color = 'green';
-
+        } else { //Hvis prisendringen til en aksje er positiv vil det sette prisendringen til grønn
             ut += "<tr>" +
-                "<td>" + Aksje.id + "</td>" +
                 "<td>" + Aksje.selskap + "</td>" +
                 "<td>" + Aksje.ticker + "</td>" +
                 "<td>" + Aksje.pris + "</td>" +
-                "<td>" + sum + "%" + "</td>" +  
-                '<td><button type="button" class="btn btn-success">Kjøp</button> </td>' +
-                '<td><button type="button" class="btn btn-danger">Selg</button></td>' +
-                   
+                '<td style="color: green;">' + sum + "%" + "</td>" + 
+                "<td> <a class='btn btn-success' href='endre.html?id=" + Aksje.id + "'>Kjøp</a></td>" +
+                "<td> <a class='btn btn-danger' href='endre.html?id=" + Aksje.id + "'>Selg</a></td>" + 
             "</tr>";
 
         }
