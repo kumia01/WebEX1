@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <!--<link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/aksjeanalyse.css" />
-    <title>Aksjeanalyse</title>
+    <link rel="stylesheet" href="../css/endre.css" />
+    <title>Kjøp Aksje</title>
 </head>
 <body>
 
@@ -25,10 +25,71 @@
     </script>
     <!--scriptNavbar-->
 
-    <div class="form-1">
-        <div class="col-sm-12" id="headerform">
-            <h1 class="header1">Kjøp og salg av aksje</h1>
-            <p class="txt1">Her vises aksjen du vil kjøpe eller selge og din portfolio for denne aksjen</p>
+    <div class="container" id="infoboks">
+        <div class="row">
+            <div class="col-sm-6" id="kolonne1">
+                <div class="panel" id="paneler">
+                    <div class="panel-heading fw-bold fs-4" style="color: #023E73">Aksjenavn</div>
+                    <div class="panel-body" style="color:#023e73">
+                        <p>Litt informasjon om bedriften</p>
+                    </div>
+
+                    <div class=" table table-responsive-md table-borderless">
+                        <table class="table" style="color: #023E73">
+                            <thread>
+                                <tr>
+                                    <th scope="col">Akjsenavn:</th>
+                                    <td scope="col">Akjsenavn</td>
+                                </tr>
+                            </thread>
+                            <tbody>
+                                <tr>
+                                    <th>Forkortelse:</th>
+                                    <td>FOR</td>
+                                </tr>
+                                <tr>
+                                    <th>Kjøpspris:</th>
+                                    <td>100kr</td>
+                                </tr>
+                                <tr>
+                                    <th>Endring i %</th>
+                                    <td>0.22%</td>
+                                </tr>
+                                <tr>
+                                    <th>Endring i NOK</th>
+                                    <td>22kr</td>
+                                </tr>
+                                <tr>
+                                    <th>Omsettning</th>
+                                    <td>NOK 22.000.000</td>
+                                </tr>
+
+                                <tr>
+                                    <th>
+                                        Antall
+                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                            <option selected>Velg..</option>
+                                            <option value="1">1</option>
+                                            <option value="2">5</option>
+                                            <option value="3">10</option>
+                                            <option value="3">50</option>
+                                            <option value="3">100</option>
+                                        </select>
+                                    </th>
+                                    <td>
+                                        
+                                        <button type="button" class="btn btn-success">Kjøp</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-4 text-center" id="aksjeGraf">
+                <p>Det kommer en graf her</p>
+            </div>
         </div>
     </div>
 
