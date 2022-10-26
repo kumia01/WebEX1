@@ -23,7 +23,8 @@ namespace ghostproject.Models
                 var bruker1 = new Brukere { Fornavn = "Ole", Etternavn = "Hansen", Adresse = "Olsloveien 82", Poststed = poststed1 };
 
                 var transaksjon1 = new Transaksjoner { Pris = aksje1.Pris, Volum = 200 };
-                var transaksjon2 = new Transaksjoner { Pris = aksje1.Pris, Volum = 200 };
+                var transaksjon2 = new Transaksjoner { Pris = aksje1.Pris, Volum = 20052 };
+
 
 
                 var nyTransaksjon = new List<Transaksjoner>();
