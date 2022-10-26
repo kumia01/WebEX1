@@ -4,18 +4,14 @@
 
 function hentAlleBrukere() {
     $.get("../bruker/HentAlle", function (bruker) {
-        consol.log(bruker);
         formaterBruker(bruker);
     });
 }
 
 function formaterBruker(bruker) {
-    let ut = 
-            <select class="custom-select" id="inputGroupSelect01">
-                <option selected>Choose...</option>
-        </select>
+    let ut = "<option selected>Choose...</option>"
     for (let brukere of bruker){
-        ut += '<option id="'+ bruker.Id +'">' + bruker.Fornavn + '</option>' 
+        ut += '<option id="'+ brukere.id +'">' + brukere.fornavn + '</option>' 
     }
     $("#inputBruker").html(ut);
 }
