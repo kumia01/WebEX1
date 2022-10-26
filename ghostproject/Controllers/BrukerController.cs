@@ -2,6 +2,7 @@
 using ghostproject.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -96,6 +97,7 @@ namespace ghostproject.Controllers
         public async Task<Bruker> HentEn(int id)
         {
             Brukere enBruker = await _db.Brukere.FindAsync(id);
+            Console.Write(id);
             var hentetBruker = new Bruker()
             {
                 Id = enBruker.Id,
