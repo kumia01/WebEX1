@@ -27,7 +27,7 @@ function formaterAksjer(Aksjer) {
                 "<td>" + Aksje.pris + "</td>" +
                 '<td style="color: red;">' + sum + "%" + "</td>" +
                 "<td> <a class='btn btn-success' href='endre.html?id=" + Aksje.id + "'>Kjøp</a></td>" +
-                "<td> <a class='btn btn-danger' href='endre.html?id=" + Aksje.id + "'>Selg</a></td>" + 
+                "<td> <a class='btn btn-danger' href='endreSelg.html?id=" + Aksje.id + "'>Selg</a></td>" + 
             "</tr>";
         } else { //Hvis prisendringen til en aksje er positiv vil det sette prisendringen til grønn
             ut += "<tr>" +
@@ -36,7 +36,7 @@ function formaterAksjer(Aksjer) {
                 "<td>" + Aksje.pris + "</td>" +
                 '<td style="color: green;">' + sum + "%" + "</td>" + 
                 "<td> <a class='btn btn-success' href='endre.html?id=" + Aksje.id + "'>Kjøp</a></td>" +
-                "<td> <a class='btn btn-danger' href='endre.html?id=" + Aksje.id + "'>Selg</a></td>" + 
+                "<td> <a class='btn btn-danger' href='endreSelg.html?id=" + Aksje.id + "'>Selg</a></td>" + 
             "</tr>";
 
         }
