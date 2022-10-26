@@ -17,3 +17,9 @@
         }
     });
 }
+
+function slettBruker() {
+    $.get("/Slett", function () {
+            hentAlle();
+        })
+    }

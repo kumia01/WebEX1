@@ -77,7 +77,7 @@ namespace ghostproject.Controllers
         }
 
         //Sletter en brukerrad ved hjelp av bruker id
-        public async Task<bool> Slett(int id)
+        public async Task<bool>Slett(int id)
         {
             try
             {
