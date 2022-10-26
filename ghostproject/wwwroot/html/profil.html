@@ -4,6 +4,7 @@
     <title>Ekspertenes Kjøpsside</title>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/loginn.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,39 +38,15 @@
                     </div>
 
                     <div class="table table-responsive-md table-borderless">
-                        <table class="table" style="color: #023E73">
-                            <thread>
-                                <tr>
-                                    <th scope="col">Fornavn</th>
-                                    <td scope="col">Ola</td>
-                                </tr>
-                            </thread>
-                            <tbody>
-                                <tr>
-                                    <th>Etternavn</th>
-                                    <td>Nordmann</td>
-                                </tr>
-                                <tr>
-                                    <th>Adresse</th>
-                                    <td>Osloveien 50</td>
-                                </tr>
-                                <tr>
-                                    <th>Postnummer</th>
-                                    <td>0220</td>
-                                </tr>
-                                <tr>
-                                    <th>By</th>
-                                    <td>Oslo</td>
-                                </tr>
-                                <tr>
-                                    <th>Land</th>
-                                    <td>Norge</td>
-                                </tr>
-                                <tr>
-                                    <th>E-post</th>
-                                    <td>Ola.Nordmann@epost.no</td>
-                                </tr>
-                            </tbody>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">brukere</label>
+                            </div>
+                            <select class="custom-select" id="inputBruker">
+                            </select>
+                        </div>
+                        <table class="table" style="color: #023E73" id="table">
+                            
                         </table>
                     </div>
                     <!--tabellslutt-->

@@ -8,6 +8,7 @@ namespace ghostproject.Models
 {
     public static class DBinit
     {
+
         public static void Initialize(IApplicationBuilder app)
         {
             using (var serviceScope = app.ApplicationServices.CreateScope())

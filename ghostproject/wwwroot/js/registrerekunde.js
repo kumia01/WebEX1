@@ -6,9 +6,8 @@
         Postnr: $("#postnr").val(),
         Poststed: $("#poststed").val()
     }
-    const url = "../Bruker/Lagre";
     console.log(bruker);
-    $.post(url, bruker, function (OK) {
+    $.post("../bruker/Lagre", bruker, function (OK) {
         if (OK) {
             console.log("Lagt inn i db");
         }
