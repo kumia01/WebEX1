@@ -16,8 +16,8 @@ namespace ghostproject.Models
                 var context = serviceScope.ServiceProvider.GetService<DB>();
 
                 // må slette og opprette databasen hver gang når den skalinitieres (seed`es)
-                context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
+                //context.Database.EnsureDeleted();
+                //context.Database.EnsureCreated();
 
                 var poststed1 = new Poststeder { Postnr = "0372", Poststed = "Oslo" };
                 var aksje1 = new FlereAksjer { Ticker = "NOK", Selskap = "Norske Kroner", Pris = 20, gammelPris = 1 };
@@ -38,7 +38,7 @@ namespace ghostproject.Models
                 context.Brukere.Add(bruker1);
                 context.FlereAksjer.Add(aksje1);
 
-                context.SaveChanges();
+                //context.SaveChanges();
             }
         }
     }
