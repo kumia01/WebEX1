@@ -69,12 +69,15 @@ function antallAksjer(Transaksjoner) {
     const url = window.location.search.substring(1); //Henter id'en fra url
     const aksjeid = url.charAt(url.length - 1); //Tar med bare id'en uten id=x
     let brukerTransaksjoner = [];
+    let omsetning = 0;
     for (let Transaksjon of Transaksjoner) {
+        omsetning += Transaksjon.volum * Transaksjon.pris;
         if (Transaksjon.flereAksjerId == aksjeid) { //Hvis valgt aksje sin id er lik bruker transaksjonene sin aksjeid
             brukerTransaksjoner.push(Transaksjon);
         }
     }
-
+    console.log(omsetning);
+    document.getElementById("omsatt").firstChild.data = omsetning;
     regnUtAntallAksjer(brukerTransaksjoner);
 }
 
