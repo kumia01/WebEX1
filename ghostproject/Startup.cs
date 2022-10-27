@@ -28,7 +28,7 @@ namespace ghostproject
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                DBinit.Initialize(app);
+                //DBinit.Initialize(app);
             }
 
             app.UseRouting();
