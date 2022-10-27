@@ -37,31 +37,52 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="panel" id="paneler">
-                    <div class="panel-heading fw-bold fs-4" style="color: #023e73">Top 10 Aksjer</div>
-                    <div class="panel-body"><img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="bilder" class="img-responsive" style="width:100%" alt="Bilde av Per"></div>
+                   <!--Kode for kortene som vises er hentet fra bootstrap https://getbootstrap.com/docs/4.0/components/card/ -->
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Topp 10 Aksjer</h4>
+                            <p class="card-text">Her vises topp 10 kjøpte og solgte aksjer</p>
+                            <a href="top10kjøp.html" class="btn btn-primary btn-sm">10 Mest Kjøpte</a>
+                            <a href="top10salg.html" class="btn btn-primary btn-sm">10 Mest Solgte</a>
+                        </div>
+                    </div>
                     <div class="panel-footer">
-                        <a href="top10kjøp.html" class="fs-5">Top 10 Kjøpte</a><br />
-                        <a href="top10salg.html" class="fs-5">Top 10 Solgte</a>
                     </div>
                 </div>
             </div>
+
             <div class="col-sm-4">
                 <div class="panel" id="paneler">
-                    <div class="panel-heading fw-bold fs-4" style="color: #023e73">Trending</div>
-                    <div class="panel-body"><img src="https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="bilder" class="img-responsive" style="width:100%" alt="Bilde av Robert"></div>
+
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">Trending</h3>
+                            <p class="card-text">Her vises mest populære aksjene og de minst populære aksjene</p>
+                            <a href="trendingbig.html" class="btn btn-primary btn-sm">Mest populære</a>
+                            <a href="trendingsmall.html" class="btn btn-primary btn-sm">Minst populære</a>
+                        </div>
+                    </div>
                     <div class="panel-footer">
-                        <a href="trendingbig.html" class="fs-5">Trending Med Høy Omsettning</a><br />
-                        <a href="trendingsmall.html" class="fs-5">Trending Med Lav Omsettning</a>
+
                     </div>
                 </div>
             </div>
+
             <div class="col-sm-4">
                 <div class="panel" id="paneler">
-                    <div class="panel-heading fw-bold fs-4" style="color: #023e73">Ekspertenes valg</div>
-                    <div class="panel-body"><img src="https://images.pexels.com/photos/1181394/pexels-photo-1181394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="bilder" class="img-responsive" style="width:100%" alt="Tor"></div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://images.pexels.com/photos/1181394/pexels-photo-1181394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Ekspertenes valg</h4>
+                            <p class="card-text">Her vil du se ekspertenes anbefalte kjøp og salg av aksjer</p>
+                            <a href="ekspertkjøp.html" class="btn btn-primary btn-sm">Anbefalt kjøp</a>
+                            <a href="ekspertsalg.html" class="btn btn-primary btn-sm">Anbefalt salg</a>
+                        </div>
+                    </div>
                     <div class="panel-footer">
-                        <a href="ekspertkjøp.html" class="fs-5">Aksjer Vi Kjøper</a><br />
-                        <a href="ekspertsalg.html" class="fs-5">Aksjer Vi Selger</a>
+
                     </div>
                 </div>
             </div>
