@@ -74,6 +74,7 @@ function antallAksjer(Transaksjoner) {
             brukerTransaksjoner.push(Transaksjon);
         }
     }
+
     regnUtAntallAksjer(brukerTransaksjoner);
 }
 
@@ -91,6 +92,28 @@ function lagreTransaksjon() {
     const aksjeid = url.charAt(url.length - 1); //Tar med bare id'en uten id=x
     const Transaksjon = {
         Volum: $("#antall").val(),
+        Pris: document.getElementById("pris").firstChild.data,
+        BrukereId: document.getElementById("brukerid").firstChild.data,
+        FlereAksjerId: aksjeid
+    }
+    console.log(Transaksjon);
+    $.post("../Transaksjon/Lagre", Transaksjon, function (OK) {
+        if (OK) {
+            console.log("Lagt inn i db");
+        }
+        else {
+            console.log("Feil - Ikke lagt inn i db");
+        }
+    });
+}
+
+function lagreTransaksjonSelg() {
+    const url = window.location.search.substring(1); //Henter id'en fra url
+    const aksjeid = url.charAt(url.length - 1); //Tar med bare id'en uten id=x
+    let volum = $("#antall").val();
+    volum = volum * (-1);
+    const Transaksjon = {
+        Volum: volum,
         Pris: document.getElementById("pris").firstChild.data,
         BrukereId: document.getElementById("brukerid").firstChild.data,
         FlereAksjerId: aksjeid
