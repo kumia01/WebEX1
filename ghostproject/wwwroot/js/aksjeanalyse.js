@@ -1,6 +1,12 @@
 ﻿$(document).ready(function () {
     hentAlleAksjer();
+    //endrer på Aksjeprisen
+    endrePris();
 });
+
+function endrePris() {
+    $.get("../Aksje/endrePris")
+}
 
 function hentAlleAksjer() {
 
@@ -40,8 +46,6 @@ function formaterAksjer(Aksjer) {
             "</tr>";
 
         }
-        console.log(sum);
-        console.log(Aksje);
     }
     
     ut += "</table>";
