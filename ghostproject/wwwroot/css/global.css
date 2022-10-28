@@ -8,3 +8,38 @@
 #navbarDropdown2 {
     color: #0027FF;
 }
+
+#bokført {
+    padding-top: 30px;
+}
+
+.btn-primary {
+    background-color: #023e73;
+    color: #D9D9D9;
+}
+.btn-outline-primary{
+    color: #023e73;
+    border-color: #023e73;
+}
+
+
+
+#graf {
+    height: 200px;
+}
+
+#balanse {
+    width:100%; 
+    max-width:960px;
+    color: #023e73
+}
+
+#tobokser {
+    margin-top: 50px;
+    color: #023e73;
+}
+
+.border{
+    height: 100px;
+}
+

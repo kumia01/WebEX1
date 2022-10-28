@@ -7,8 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../css/global.css" />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css" />
+    
     <title>Min Balanse</title>
 </head>
 <body>
@@ -18,12 +19,40 @@
     <!--navbar-->
     <!--scriptNavbar-->
     <script>
-            $(function () {
-                $("#navbar").load("navbar.html");
-            });
+        $(function () {
+            $("#navbar").load("navbar.html");
+        });
     </script>
 
     <!--tabell-->
+
+    <div class="container-fluid">
+        <div class="border-buttom">
+            <div class="panel-heading fw-bold fs-5 mt-3 mb-3" style="color: #023e73">Overføringer</div>
+            <button type="button" class="btn btn-primary btn-sm">Overfør</button>
+            <button type="button" class="btn btn-outline-primary btn-sm">Transaksjoner</button>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="btn-group-vertical mt-3 costum-btn">
+            <button type="button" class="btn btn-primary btn-sm mb-1 ">Overfør</button>
+            <button type="button" class="btn btn-primary btn-sm mb-1">Uttak</button>
+            <button type="button" class="btn btn-primary btn-sm mb-1">Aktiva</button>
+            <button type="button" class="btn btn-primary btn-sm mb-1">Overfør aksjer</button>
+        </div>
+
+
+
+        <div class="btn-group-vertical mt-3 betmetoder">
+            <button type="button" class="btn btn-primary btn-lg mb-2">Overfør</button>
+            <button type="button" class="btn btn-primary btn-lg mb-2">Uttak</button>
+            <button type="button" class="btn btn-primary btn-lg mb-2">Aktiva</button>
+            <button type="button" class="btn btn-primary btn-lg mb-2">Overfør aksjer</button>
+        </div>
+    </div>
+    
+  
 
 </body>
 </html>
