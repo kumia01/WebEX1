@@ -33,6 +33,20 @@ function formaterInfo(bruker) {
         '<tbody><tr><th>Etternavn</th><td>' + bruker.etternavn + '</td></tr>' +
         '<tr><th>Adresse</th><td>' + bruker.adresse + '</td></tr>' +
         '<tr><th>Postnummer</th><td>' + bruker.postnr + '</td></tr>' +
-        '<tr><th>Bye</th><td>' + bruker.poststed + '</td></tr></tbody>'
+        '<tr><th>Poststed</th><td>' + bruker.poststed + '</td></tr>' +
+        '<tr hidden><th></th><td id="brukerid">' + bruker.id + '</td></tr></tbody>'
     $("#table").html(ut);
+}
+
+function slettBruker() {
+    let id = document.getElementById("brukerid").firstChild.data;
+    let url = "id=" + id;
+    $.get("../Bruker/Slett?" + url, function (OK) {
+        if (OK) {
+            console.log("Slettet fra database");
+        }
+        else {
+            console.log("Feil - ikke slettet fra database");
+        }
+    });
 }
