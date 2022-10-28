@@ -7,7 +7,7 @@
         Poststed: $("#poststed").val()
     }
     console.log(bruker);
-    $.post("../bruker/Lagre", bruker, function (OK) {
+    $.post("../Bruker/Lagre", bruker, function (OK) {
         if (OK) {
             console.log("Lagt inn i db");
         }
