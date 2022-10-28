@@ -17,7 +17,7 @@ function hentAlleAksjer() {
 }
 //Formaterer alle aksjene
 function formaterAksjer(Aksjer) {
-    let ut = "<table class='table table-striped'>" +
+    let ut = "<table class='table-responsive-lg table table-striped table-md'>" +
         "<tr>" +
         "   <th>Selskap</th><th>Ticker</th><th>Pris</th><th>Prisendring</th><th>Kjøp</th><th>Salg</th>" +
 

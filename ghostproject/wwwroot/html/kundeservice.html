@@ -5,8 +5,9 @@
     <title>kundeservice</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link href="../css/kundeservice.css" rel="stylesheet">
-    <link href="../css/index.css" rel="stylesheet"/>
+    <link href="../css/index.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -22,29 +23,35 @@
     </script>
     <!--scriptNavbar-->
 
-    <div class="container">
+    <div class="container-fluid mt-5">
         <div class="row">
             <div class="col-sm-7">
                 <div class="panel" id="paneler">
                     <div class="form-group">
-                        <h1>Ofte stilte spørsmål</h1>
+
+                        <h1 class="panel-heading fw-bold fs-2">Ofte stilte spørsmål</h1><br />
+
                         <h5>Jeg har tapt masse penger, hva gjør jeg nå?</h5>
-                        <p>Svar: Bruk mere penger</p>
+                        <p class="panel-body fw-bold">Svar: Bruk mere penger</p>
+                        <br />
 
                         <h5>Kan jeg få tilbake pengene mine?</h5>
-                        <p>Svar: Nei.</p>
+                        <p class="panel-body fw-bold bold">Svar: Nei.</p> <br />
 
                         <h5>Kan jeg ta opp lån hos dere?</h5>
-                        <p>Svar: Nei. Søk hjelp.</p>
+                        <p class="panel-body fw-bold">Svar: Nei. Søk hjelp.</p> <br />
 
                         <h5>Hvordan kan jeg gi disse elevene en bra karakter?</h5>
-                        <p>Svar: Logg inn på Inspera og sett karakter til A :) </p>
+                        <p class="panel-body fw-bold">Svar: Logg inn på Inspera og sett karakter til A :) </p>
                     </div>
                 </div>
             </div>
 
             <div class="col-sm-5">
-                <h4>Fyll inn info for å sende til kundeservice</h4>
+               <img src="../img/Artboard 2.png" style="width:250px" />
+            </div>
+            <div>
+                <h4 class="panel-heading fw-bold fs-2 pt-5">Fyll inn info for å sende til kundeservice</h4>
                 <div class="form-group">
                     <label for="fornavn">Navn</label>
                     <input type="text" placeholder="Navn" class="form-control" id="helpNavn" required="required">
@@ -62,10 +69,12 @@
 
                 <div class="form-group">
                     <div class="regknapp">
-                        <button class="btn btn-primary btn-sm">Send Til Kundeservice</button>
+                        <button class="btn btn-primary btn-sm">Send Til Kundeservice</button><br />
                     </div>
+                    <div><br /></div>
                 </div>
             </div>
+
         </div>
     </div>
 </body>
