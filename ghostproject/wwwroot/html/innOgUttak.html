@@ -5,10 +5,12 @@
     <title>GhostCoin</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../css/global.css" />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css" />
+
     <title>Min Balanse</title>
 </head>
 <body>
@@ -18,9 +20,47 @@
     <!--navbar-->
     <!--scriptNavbar-->
     <script>
-            $(function () {
-                $("#navbar").load("navbar.html");
-            });
+        $(function () {
+            $("#navbar").load("navbar.html");
+        });
     </script>
+
+    <!--tabell-->
+
+    <div class="container-fluid">
+        <div class="border-buttom">
+            <div class="panel-heading fw-bold fs-5 mt-3 mb-3" style="color: #023e73">Overføringer</div>
+            <button type="button" class="btn btn-primary btn-sm">Overfør</button>
+            <a class="btn btn-outline-primary btn-sm" href="historikk.html" role="button">Transaksjoner</a>
+        </div>
+
+
+        <div class="knapper">
+            <div class="row">
+                <div class="col">
+                    <div class="btn-group-vertical mt-3 costum-btn">
+                        <button type="button" class="btn btn-primary btn-sm mb-1 ">Overfør</button>
+                        <button type="button" class="btn btn-primary btn-sm mb-1">Uttak</button>
+                        <button type="button" class="btn btn-primary btn-sm mb-1">Aktiva</button>
+                        <button type="button" class="btn btn-primary btn-sm mb-1">Overfør aksjer</button>
+                    </div>
+                </div>
+
+                    <div class="col">
+                        <div class="panel-heading fw-bold fs-5 mb-2 text-center" style="color: #023e73">Overføringer</div>
+                        <div class="panel-body text-center" style="color: #023e73">Hvordan ønsker du å sette inn penger?</div>
+                        <div class="btn-group-vertical mt-3 betmetoder">
+                            <button type="button" class="btn btn-primary btn-md mb-2 fw-bold"><i class="bi bi-emoji-wink"></i> Vipps</button>
+                            <button type="button" class="btn btn-primary btn-md mb-2 fw-bold"><i class="bi bi-apple"></i> Apple Pay</button>
+                            <button type="button" class="btn btn-primary btn-md mb-2 fw-bold"><i class="bi bi-credit-card"></i> Credit- eller debitkort</button>
+                            <button type="button" class="btn btn-primary btn-md mb-2 fw-bold"><i class="bi bi-bank"></i> Bankoverføring</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
 </body>
 </html>

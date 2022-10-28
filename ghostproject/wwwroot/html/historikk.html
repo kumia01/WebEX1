@@ -5,10 +5,12 @@
     <title>GhostCoin</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../css/global.css" />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css" />
+    
     <title>Min Balanse</title>
 </head>
 <body>
@@ -18,12 +20,63 @@
     <!--navbar-->
     <!--scriptNavbar-->
     <script>
-            $(function () {
-                $("#navbar").load("navbar.html");
-            });
+        $(function () {
+            $("#navbar").load("navbar.html");
+        });
     </script>
 
-    <!--tabell-->
+    <div class="container-fluid">
+        <div class="border-buttom">
+            <div class="panel-heading fw-bold fs-5 mt-3 mb-3" style="color: #023e73">Overføringer</div>
+            <a class="btn btn-outline-primary btn-sm" href="innOgUttak.html" role="button">Overfør</a>
+            <button type="button" class="btn btn-primary btn-sm">Transaksjoner</button>
+        </div>
 
+
+        <!--tabell-->
+
+        <div class="container" id="infoboks">
+            <div class="row">
+                <div class="col-md-6 pt-3" id="kolonne1">
+                
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td scope="col">Dato</td>
+                                <td scope="col"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">11.02.2021</td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><i class="bi bi-arrow-left"> Overføring til konto: NOK 2, 0000</i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">03.01.2021</td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><i class="bi bi-arrow-right"> Innskudd: NOK 1, 000</i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">05.01.2021</td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><i class="bi bi-arrow-left"> Overføring av aksjer til bruker @ </i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">15.12.2020</td>
+                            </tr>
+                            <tr>
+                                <td scope="row"><i class="bi bi-arrow-right"> Mottok aksjer fra bruker @</i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
