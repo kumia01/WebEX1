@@ -1,4 +1,7 @@
-﻿$(document).ready(function () {
+﻿//
+//Kun brukt til testing
+//
+$(document).ready(function () {
 
     //const id = window.location.search.substring(1);
     //const url = "../Bruker/HentEn?" + id;

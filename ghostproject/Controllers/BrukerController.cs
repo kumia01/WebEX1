@@ -97,11 +97,9 @@ namespace ghostproject.Controllers
         public async Task<Bruker> HentEn(int id)
         {
             Brukere enBruker = await _db.Brukere.FindAsync(id);
-            Console.Write(id);
             var hentetBruker = new Bruker()
             {
                 Id = enBruker.Id,
-                //Personnr = enBruker.Personnr,
                 Fornavn = enBruker.Fornavn,
                 Etternavn = enBruker.Etternavn,
                 Adresse = enBruker.Adresse,

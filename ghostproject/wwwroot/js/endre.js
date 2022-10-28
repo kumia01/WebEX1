@@ -90,6 +90,7 @@ function regnUtAntallAksjer(brukerTransaksjoner) {
     document.getElementById("brukeraksjer").firstChild.data = volum; //Setter inn volumet som er regnet ut
 }
 
+//Lagrer transaksjonen, blir kalt på når bruker trykker kjøp
 function lagreTransaksjon() {
     const url = window.location.search.substring(1); //Henter id'en fra url
     const aksjeid = url.charAt(url.length - 1); //Tar med bare id'en uten id=x
@@ -110,11 +111,12 @@ function lagreTransaksjon() {
     });
 }
 
+//Lagrer transaksjonen, blir kalt på når en bruker selger
 function lagreTransaksjonSelg() {
     const url = window.location.search.substring(1); //Henter id'en fra url
     const aksjeid = url.charAt(url.length - 1); //Tar med bare id'en uten id=x
     let volum = $("#antall").val();
-    volum = volum * (-1);
+    volum = volum * (-1); //Setter volum til å bli negativt
     const Transaksjon = {
         Volum: volum,
         Pris: document.getElementById("pris").firstChild.data,
